@@ -140,7 +140,7 @@ class TestSignupForActivity:
     
     def test_signup_duplicate_fails(self, client):
         """Test that duplicate signup fails"""
-        # First signup should succeed
+        # Attempting to sign up a student who is already registered should fail
         response = client.post(
             "/activities/Swimming%20Club/signup?email=sarah@mergington.edu"
         )
